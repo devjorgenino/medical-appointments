@@ -83,22 +83,6 @@ npm run dev
 
 ## Configuración
 
-### Variables de Entorno del Backend
-
-| Variable | Descripción | Valor por Defecto |
-|----------|-------------|-------------------|
-| `DATABASE_URL` | Conexión a PostgreSQL | postgresql://user:password@localhost:5432/medical_appointments |
-| `SECRET_KEY` | Clave secreta para JWT | - |
-| `ALGORITHM` | Algoritmo de firma JWT | HS256 |
-| `ACCESS_TOKEN_EXPIRE_MINUTES` | Expiración del token | 30 |
-| `SMTP_HOST` | Servidor de correo | - |
-| `SMTP_PORT` | Puerto SMTP | 587 |
-| `SMTP_USER` | Usuario SMTP | - |
-| `SMTP_PASSWORD` | Contraseña SMTP | - |
-| `FRONTEND_URL` | URL del frontend | http://localhost:5173 |
-| `ALLOWED_ORIGINS` | Origins permitidos para CORS | http://localhost:5173 |
-| `ENVIRONMENT` | Entorno de ejecución | development |
-
 ## Estructura del Proyecto
 
 ```
@@ -131,46 +115,6 @@ CitasMedicas/
 ├── docker-compose.yml          # Orquestación de servicios
 └── README.md
 ```
-
-## Endpoints Principales
-
-### Autenticación
-- `POST /auth/login` - Iniciar sesión
-- `POST /auth/register` - Registrar usuario
-- `POST /auth/refresh` - Actualizar token
-- `POST /auth/forgot-password` - Recuperar contraseña
-
-### Usuarios
-- `GET /users` - Listar usuarios
-- `POST /users` - Crear usuario
-- `PUT /users/{id}` - Actualizar usuario
-- `DELETE /users/{id}` - Eliminar usuario
-
-### Doctores
-- `GET /doctors` - Listar doctores
-- `POST /doctors` - Crear doctor
-- `PUT /doctors/{id}` - Actualizar doctor
-- `DELETE /doctors/{id}` - Eliminar doctor
-
-### Pacientes
-- `GET /patients` - Listar pacientes
-- `POST /patients` - Crear paciente
-- `PUT /patients/{id}` - Actualizar paciente
-
-### Citas
-- `GET /appointments` - Listar citas
-- `POST /appointments` - Crear cita
-- `PUT /appointments/{id}` - Actualizar cita
-- `DELETE /appointments/{id}` - Cancelar cita
-
-### Horarios
-- `GET /schedules` - Listar horarios
-- `POST /schedules` - Crear horario
-- `PUT /schedules/{id}` - Actualizar horario
-
-### Dashboard
-- `GET /dashboard/stats` - Estadísticas generales
-- `GET /dashboard/appointments` - Citas por período
 
 ## Roles de Usuario
 
@@ -206,7 +150,3 @@ alembic revision --autogenerate          # Crear migración
 ## Licencia
 
 MIT License - consulta el archivo LICENSE para más detalles.
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o pull request para sugerir cambios.
