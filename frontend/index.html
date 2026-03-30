@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema de gestion de citas medicas - Administra tus consultas medicas de manera facil y segura" />
+    <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1e3a8a" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Security headers via meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
+    <!-- Preconnect to API for faster initial requests -->
+    <link rel="preconnect" href="http://localhost:8000" crossorigin />
+    <link rel="dns-prefetch" href="http://localhost:8000" />
+    
+    <!-- Preload critical fonts if any -->
+    <!-- <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin /> -->
+    
+    <title>CitasMedicas - Sistema de Gestion de Citas</title>
+  </head>
+  <body>
+    <!-- No-JS fallback message -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: system-ui, sans-serif;">
+        <h1>JavaScript requerido</h1>
+        <p>Esta aplicacion requiere JavaScript para funcionar correctamente. Por favor, habilita JavaScript en tu navegador.</p>
+      </div>
+    </noscript>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
